@@ -1,0 +1,19 @@
+<footer [ngClass]="['page-width']" [ngStyle]="{'margin-top': '55px','padding': '45px 15px 55px'}">
+
+    <div [ngClass]="['d-flex','grid-xxl-2']">
+    <div>
+    <heading [ngClass]="['how-heading']"  [heading]="'Useful Links'" [headingType]="'h4'" [ui]="'font-size:20px;font-weight:600;'"></heading>    
+<navigation  [navItems]="navItems" [navStyle]="'Vertical'"></navigation>
+</div>
+<div>
+    <div ngClass="newsletter-max-width">
+    <heading [ngClass]="['how-heading']"  [heading]="'Join our Newsletter'" [headingType]="'h4'" [ui]="'font-size:20px;font-weight:600;'"></heading>   
+    <div ngClass="btn-newsletter">
+        <input type="email" placeholder="YOUR EMAIL" />
+        <heading [ngClass]="['button']"  [heading]="'SEND'" [headingType]="'button'" ></heading>   
+    </div>  </div>
+    </div>
+</div>
+<app-social-media></app-social-media>
+    <small class="site-footer__copyright-content">© 2022, <a href="/" title="">nearesthealth</a></small>
+</footer>

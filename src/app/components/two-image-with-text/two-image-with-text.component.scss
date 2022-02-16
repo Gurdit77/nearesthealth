@@ -1,0 +1,29 @@
+.homepage-section-2-wrapper
+{
+    .section-right strong {
+        display: block;
+    }
+    padding: 80px 0;
+>div>div {
+    flex: 1 1 50%;
+}
+.section-right {
+    padding-left: 100px;
+}
+>div>div img {
+    width: 50%;
+}
+.section-left{
+    align-items: center;
+    display: flex;
+    img:first-child {
+    margin-top: 70px;
+    padding-right: 20px;
+}
+}
+>div {
+    display: flex;
+    align-items: center;
+}
+
+}

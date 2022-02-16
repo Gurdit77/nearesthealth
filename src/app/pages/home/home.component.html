@@ -1,0 +1,33 @@
+<site-banner
+[heading]="'Discover your<strong> best immune health</strong>'"
+[description]="'NearestHealth is your functional medicine resource for autoimmune disease. Get started today with a free assessment.'"
+[btnText]="'TAKE A FREE IMMUNE ASSESSMENT'"
+[btnLink]="'/'"
+[image]="'./assets/site-banner/banner.png'"
+[bgColor]="'#7fc0db'"
+></site-banner>
+<app-two-image-with-text
+[image]="'./assets/images/second_section1.jpg'"
+[image2]="'./assets/images/second_section2.png'"
+[heading]="'We are<strong>  NearestHealth</strong>'"
+[description]="'We are focused on helping you reach your optimal immune health, naturally.
+Understanding root causes of poor immune health is the start to feeling better.<br><br>We start with a free, online Immune Assessment which
+is the most comprehensive immune review out there. That then helps guide which diagnostic tests and supplements you’ll want to take,
+provide more information on potential issues and enable us to connect you with a top functional medicine doctor.<br><br>
+<strong>Start your immune health journey today!</strong>'"
+[btnText]="'GET STARTED'"
+[btnLink]="'/'"
+    ></app-two-image-with-text>
+    <app-how-it-works
+    [heading]="'<b>How it Works</b>'"
+    [subHeading]="'in 4 easy steps.'"
+    [items]="howItWorksItems"
+    ></app-how-it-works>
+<div [ngClass]="['my-80']">
+    <app-text-width-image         
+        [heading]="'Our<br><b>Immune Assessment</b>'"
+        [subHeading]="'in 4 easy steps.'"
+        [items]="items"
+        [image]="'./assets/images/tab.png'"
+        ></app-text-width-image>
+    </div>

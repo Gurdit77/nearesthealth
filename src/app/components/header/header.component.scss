@@ -1,0 +1,24 @@
+.site-header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #fff;
+    z-index: 9;
+}
+header {
+    display: flex;
+    align-items: center;
+}
+header > site-logo{
+width: 25%;
+}
+header > navigation{
+    width: 50%;
+    }
+    header >   .header-right{
+        width: 25%;
+    }
+    .header-right {
+        display: flex;
+        justify-content: flex-end;
+    }

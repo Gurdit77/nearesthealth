@@ -1,0 +1,17 @@
+<div [ngClass]="['page-width','how-it-works']">
+<heading [ngClass]="['text-center','how-heading']"  [heading]="heading" [headingType]="'h2'" [ui]="'margin-bottom:5px'"></heading>  
+<heading [ngClass]="['text-center','site-text']"  [heading]="subHeading" [headingType]="'p'" [ui]="'margin-bottom:55px'"></heading>  
+      
+
+
+<div [ngClass]="['d-flex','grid', 'grid-xxl-4 grid-sm-2', 'mx--10']" >
+    <div [ngClass]="['grid-item','px-10','mb-55']"   *ngFor="let item of items">
+    <img [ngClass]="['mb-19']" src="{{item.image}}" alt="">
+    <h3 [ngClass]="['mb-17']">{{item.heading}}</h3>
+    <p ngClass="site--text" [innerHTML]="item.description"></p>
+    </div>    
+</div>        
+<div [ngClass]="['text-center']">
+<a routerLink="/" siteButton="dark">GET STARTED</a>
+</div>   
+</div>

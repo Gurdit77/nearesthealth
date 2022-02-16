@@ -1,0 +1,13 @@
+
+<section class="site-banner">
+    <div class="page-width">
+        <div>
+            <div class="banner-content">
+                <heading [heading]="heading" [headingType]="'h2'"></heading>                
+                <div class="site--text"><p [innerHTML]="description"></p></div>
+                <a siteButton="dark" class="site--btn" routerLink="{{btnLink}}">{{btnText}}</a>
+              </div>
+        </div>
+        <img src="{{image}}">
+    </div>
+</section>

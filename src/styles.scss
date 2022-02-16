@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$font: 'Poppins', sans-serif;
+$colorRed:#f45561;
+b, strong {
+font-weight: 600;
+}
+.site--heading strong{
+display: block;
+}
+.site--text,.site--text *{
+    font-size: 15px;
+    font-family: Poppins;
+    color: #000;
+    line-height: 1.814;
+}
+*{
+margin: 0;
+padding: 0;
+font-family: $font;
+box-sizing: border-box;
+}
+img{
+max-width: 100%;
+}
+.site-logo{
+display: block;
+}
+a.btn{
+text-decoration: none;
+}
+.btn {
+height: 52px;
+font-size: 15px;
+font-family: $font;
+text-transform: uppercase;
+text-align: center;
+display: inline-block;
+line-height: 52px;
+margin-top: 25px;
+padding: 0 35px;  
+cursor: pointer;
+}
+.btn-dark{
+background-color:$colorRed;
+color: #fff;
+border: 1px solid $colorRed;
+&:hover,&:focus{
+background: #000;
+border-color: #000;
+color: #fff;
+}
+}
+.btn-light{
+background-color:transparent;
+color: $colorRed;
+border: 1px solid $colorRed;
+}
+.btn-default{
+font-size: 15px;
+color: $colorRed;
+text-transform: uppercase;
+line-height: 22px;
+text-align: right;
+background: transparent;
+border: 0;
+padding: 0;
+border-bottom: 1px solid;
+&:hover,&:focus{
+color:#404040;
+}
+}
+.page-width{
+padding: 0 15px;
+margin: 0 auto;
+max-width: 1366px;
+}
+
+ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+header nav {
+margin: 25px 0;
+}
+$media: sm,md,lg,xl,xxl;
+$textAlign: center,left,right;
+@each $items in $textAlign {
+.text-#{$items}{
+    > *,&{
+           text-align: $items  !important;
+    }
+     }
+}
+$alignItems: center,flex-end,flex-start,stretch,baseline;
+@each $items in $alignItems {
+.align-items-#{$items} {
+align-items: $items;
+}
+}
+$justify: center,flex-end,flex-start,space-around,space-between,space-evenly;
+@each $items in $justify {
+.jc-#{$items} {
+justify-content: $items;
+}
+}
+$display: inline,block,contents, flex, grid, inline-block,inline-flex,inline-grid,inline-table,list-item, run-in, table, table-caption, table-column-group, table-header-group, table-footer-group, table-row-group, table-cell, table-column, table-row, none, inherit;
+@each $d in $display {
+.d-#{$d} {
+display: $d;
+}
+}
+
+
+$gridWidth:1,2,3,4,5,6,7,8,9,10,11,12;
+@each $width in $gridWidth {
+    @each $med in $media {
+        @if $med == "sm" {
+            @media (max-width:576px){
+            .grid-#{$med}-#{$width} > * {
+                max-width: calc(100% / #{$width});
+                width: 100%;
+                }
+          }
+        } 
+          @else if $med == "md" {
+            @media (max-width:768px){
+                .grid-#{$med}-#{$width} > * {
+                    max-width: calc(100% / #{$width});
+                    width: 100%;
+                    }
+            }
+        }
+          @else if $med == "lg" {
+            @media (max-width:992px){
+                .grid-#{$med}-#{$width} > * {
+                    max-width: calc(100% / #{$width});
+                    width: 100%;
+                    }
+            } 
+        }
+          @else if $med == "xl" {
+            @media (max-width:1200px){
+                .grid-#{$med}-#{$width} > * {
+                    max-width: calc(100% / #{$width});
+                    width: 100%;
+                    }
+            }  
+        }
+          @else if $med == "xxl" {
+    .grid-#{$med}-#{$width} > * {
+        max-width: calc(100% / #{$width});
+        width: 100%;
+        }
+}        
+          
+
+    }
+}
+@for $i from -1000 through 1000 {
+.mt-#{$i}{
+margin-top: #{$i}px;
+}
+.mb-#{$i}{
+margin-bottom: #{$i}px;
+}
+.mr-#{$i}{
+margin-right: #{$i}px;
+}
+.ml-#{$i}{
+margin-left: #{$i}px;
+} 
+.m-#{$i}{
+margin: #{$i}px;
+}
+.mx-#{$i}{
+margin-left: #{$i}px;
+margin-right: #{$i}px;
+}
+.my-#{$i}{
+margin-top: #{$i}px;
+margin-bottom: #{$i}px;
+}
+.pt-#{$i}{
+padding-top: #{$i}px;
+}
+.pb-#{$i}{
+padding-bottom: #{$i}px;
+}
+.pr-#{$i}{
+padding-right: #{$i}px;
+}
+.pl-#{$i}{
+padding-left: #{$i}px;
+} 
+.p-#{$i}{
+padding: #{$i}px;
+}
+.px-#{$i}{
+padding-left: #{$i}px;
+padding-right: #{$i}px;
+}
+.py-#{$i}{
+padding-top: #{$i}px;
+padding-bottom: #{$i}px;
+}
+}
+footer{
+    .btn-newsletter input {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid rgb(90,118,122);
+        outline: 0!important;
+        min-height: 46px;
+    }
+    
+    input::-webkit-input-placeholder {
+        font-size: 14px;
+        font-family: Poppins;
+        color: #5a767a66;
+        line-height: 1;
+        text-align: left;
+        opacity: 1;
+    }
+    
+    .button button {
+        background: transparent;
+        color: #000;
+        font-size: 13px;
+        font-family: Poppins;
+        text-align: center;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-weight: 600;
+        letter-spacing: 1.04px;
+    }
+    
+    .btn-newsletter {
+        position: relative;
+    }
+    
+    .btn-newsletter > .button {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+}
+ul.social_media svg {
+    height: 18px;
+    width: 18px;
+    display: block;
+    color: #fff;
+    fill: #fff;
+}
+
+ul.social_media a {
+    border-radius: 50%;
+    background-color: #f45561;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.social_media {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 7.5px;
+}
+
+ul.social_media li +li {
+    padding: 0 5px;
+}
+.immune-page-banner .site--text strong {
+    display: block;
+    font-size: 18px;
+    font-family: Poppins;
+    color: #000;
+    font-weight: 600;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.immune-page-banner .site--heading {
+    margin-bottom: 6px !important;
+}
+.immune-page-banner 
+a.site--btn {
+    padding: 0 64px;
+}

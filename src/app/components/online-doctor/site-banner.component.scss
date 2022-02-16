@@ -1,0 +1,20 @@
+section.site-banner > div {
+    display: flex;
+    align-items: center;
+}
+
+.site--text,.site--text p {
+    font-size: 15px;
+    color: #000;
+    line-height: 1.814;
+    strong{
+        display: block;
+    font-size: 18px;
+    font-family: Poppins;
+    color: #000;
+    font-weight: 600;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 15px;
+    }
+}
